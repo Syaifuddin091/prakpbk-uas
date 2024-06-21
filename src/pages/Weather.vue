@@ -48,7 +48,7 @@
               </div>
             </div>
           </div>
-
+          
           <div class="additional-details">
             <div class="detail-item">
               <i class="fas fa-tint"></i> Humidity : {{ weatherData.main.humidity }}%
@@ -78,7 +78,10 @@
         </div>
       </q-card-section>
     </q-card>
-    <div class="cloud"></div>
+    <div class="awan no1"></div>
+    <div class="awan no2"></div>
+    <div class="awan no4"></div>
+    <div class="awan no5"></div>
   </q-page>
 </template>
 
@@ -141,34 +144,98 @@ onMounted(() => {
   background: linear-gradient(0deg, rgba(134,246,255,1) 0%, rgba(255,255,255,1) 100%), url('../assets/bg2-cloudy.png');
   color: black;
 }
-.cloud{ 
-  margin-top:190px;
-  margin-left: 70px;
-  width:350px;
-  height:120px;
-  background:#ECEFF1;
-  box-shadow: 5px 5px rgba(0,0,0,0.2);
-  border-radius:100px;
-}
-.cloud::after, .cloud::before{
-  content:"";
-  position:relative;
-  display:inline-block;
-  background:inherit;
-  border-radius:inherit;
-}
-.cloud::after{
-  width:100px;
-  height:100px;
-  top:-120px;
-  left:-130px;
 
+.awan{
+  width: 200px;
+  height: 60px;
+  background:#ffffff;
+  border-radius: 200px;
+  position: relative;
+  z-index: 9999;
 }
-.cloud::before{
-  width:180px;
-  height:180px;
-  top: -70px;
-  left:130px;
+
+.awan:before,
+.awan:after{
+    content: ' ';
+    position: absolute;
+    background: #ffffff;
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    border-radius:100px;
+    text-transform: rotate(30deg); 
+  }
+
+.awan:after{
+    width: 120px;
+    height: 120px;
+    top: -55px;
+    left: auto;
+    right: 15px;
+  }
+
+.no2{
+  left: 200px;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  -webkit-animation: jalankanawan 25s linear infinite;
+  -moz-animation: jalankanawan 25s linear infinite;
+  -ms-animation: jalankanawan 25s linear infinite;
+  -o-animation: jalankanawan 25s linear infinite;
+  animation: jalankanawan 25s linear infinite;
+}
+
+.no4{
+  left: 470px;
+  top: -250;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+  -webkit-animation: jalankanawan 18s linear infinite;
+  -moz-animation: jalankanawan 18s linear infinite;
+  -ms-animation: jalankanawan 18s linear infinite;
+  -o-animation: jalankanawan 18s linear infinite;
+  animation: jalankanawan 18s linear infinite;
+}
+
+.no5{
+  left: -150px;
+  top: -150px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  -webkit-animation: jalankanawan 20s linear infinite;
+  -moz-animation: jalankanawan 20s linear infinite;
+  -ms-animation: jalankanawan 20s linear infinite;
+  -o-animation: jalankanawan 20s linear infinite;
+  animation: jalankanawan 20s linear infinite;
+}
+
+.no1{
+  top: 90px;
+  -webkit-animation: jalankanawan 15s linear infinite;
+  -moz-animation: jalankanawan 15s linear infinite;
+  -ms-animation: jalankanawan 15s linear infinite;
+  -o-animation: jalankanawan 15s linear infinite;
+  animation: jalankanawan 15s linear infinite;
 }
 
 .weather-card {
@@ -266,7 +333,29 @@ onMounted(() => {
 }
 
 .custom-button {
-  box-shadow: none !important; /* Remove shadow */
-  color: black !important; /* Text color black */
+  box-shadow: none !important; 
+  color: black !important; 
 }
+
+@-webkit-keyframes jalankanawan {
+  0% { margin-left: 1280px; }
+  100% { margin-left: -1280px; }
+}
+
+@-moz-keyframes jalankanawan {
+  0% { margin-left: 1280px; }
+  100% { margin-left: -1280px; }
+}
+
+@-o-keyframes jalankanawan {
+  0% { margin-left: 1280px; }
+  100% { margin-left: -1280px; }
+}
+
+@keyframes jalankanawan {
+  0% { margin-left: 1280px; }
+  100% { margin-left: -1280px; }
+}
+
+
 </style>

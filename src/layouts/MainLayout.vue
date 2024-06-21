@@ -13,7 +13,7 @@
                   <q-item-label>Tugas 1</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item clickable v-close-popup @click="navigateTo('https://example.com/tugas2')">
+              <q-item clickable v-close-popup @click="navigateTo('https://ibnu.vercel.app/')">
                 <q-item-section>
                   <q-item-label>Tugas 2</q-item-label>
                 </q-item-section>
@@ -23,7 +23,7 @@
                   <q-item-label>Tugas 3</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item clickable v-close-popup @click="navigateTo('https://example.com/tugas4')">
+              <q-item clickable v-close-popup @click="navigateTo('https://nestedibnu.vercel.app/')">
                 <q-item-section>
                   <q-item-label>Tugas 4</q-item-label>
                 </q-item-section>
